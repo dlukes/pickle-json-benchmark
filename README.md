@@ -1,17 +1,11 @@
-Python Serialization Benchmark
-=======
+Code from the Python Serialization Benchmark in this [blog
+post](http://www.benfrederickson.com/dont-pickle-your-data/), updated
+for Python 3, leaving only `pickle` and `json` as the two stdlib
+contenders.
 
-Code to measure the rate of a couple different python serialization libraries.
-Details are in the [blog
-post](http://www.benfrederickson.com/dont-pickle-your-data/).
+Spoiler: in the years since the blog post was written, `pickle` has
+become faster than `json` and more competitive in terms of disk usage:
 
-### OSX install
+![items per second](./speedchart.png)
 
-    brew install thrift
-    pip install -r requirements.txt
-
-
-If you have isues with not being able to build matplotlib due to not finding
-freetype, try:
-
-    ln -s /usr/local/opt/freetype/include/freetype2 /usr/local/include/freetype
+![average size](./sizechart.png)
