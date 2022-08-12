@@ -46,7 +46,7 @@ def runTests():
 
     methods = {
                'Pickle' : (pickle.dumps, pickle.loads, data),
-               'JSON' : (lambda d: d.toJSON(), Tweet.fromJSON, data),
+               'JSON' : (Tweet.toJSON, Tweet.fromJSON, data),
                }
 
     output = []
